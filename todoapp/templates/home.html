@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div>
+    <h2>DASHBOARD</h2>
+    <strong>{{ user.username }}</strong>
+    <form action="{%url 'logout' %}" method="post">
+        {% csrf_token %}
+        <button type="submit"><strong>LOGOUT</strong></button>
+    </form>
+   </div>
+{% endblock content %}
